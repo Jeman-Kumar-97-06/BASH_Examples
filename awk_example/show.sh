@@ -8,3 +8,6 @@ awk -F',' -v var='dates_dawg:' '{print var $2}' mock.csv
 #dates_dawg:2024-11-01
 #dates_dawg:2024-11-02
 #.............
+awk -F',' '{sum += $3} END {print "sum:" sum}' mock.csv
+#OUTPUT:
+#sum:625
